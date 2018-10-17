@@ -84,3 +84,6 @@ dist
 
 # Netlify
 .netlify/
+
+#HelixUI
+!assets/helix-ui/dist
