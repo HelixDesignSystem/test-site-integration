@@ -1,0 +1,5 @@
+{
+  "title": "Testing part 2",
+  "date": "2018-10-17T11:43:30-05:00",
+  "body": "Actually trying the CMS\n<h1>Testing straight html in here</h1>\nAnd testing a HelixUI badge:\n<a href=\"\">\n  Link\n  <span class=\"hxBadge\">1</span>\n</a>\n<style>\n.hxBadge {\n\talign-items: center;\n\tbackground-color: #d32f2f;\n\tborder-radius: 1em;\n\tcolor: #ffffff;\n\tdisplay: inline-flex;\n\theight: 1.25em;\n\tjustify-content: center;\n\tmin-width: 1.25em;\n\tpadding: 0 0.25em;\n\ttext-align: center;\n}\n</style>"
+}
