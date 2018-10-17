@@ -5,6 +5,10 @@
       <br>
       <strong>Posted on <time :datetime="date">{{ date }}</time></strong>
     </p>
+    <br />
+    <br />
+    <br />
+    <p>Using v-html directive: <span v-html="body"></span></p>
     <img :src="thumbnail">
   </article>
 </template>
