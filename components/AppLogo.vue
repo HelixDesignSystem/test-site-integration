@@ -1,79 +1,26 @@
 <template>
-  <div class="VueToNuxtLogo">
-    <div class="Triangle Triangle--two"/>
-    <div class="Triangle Triangle--one"/>
-    <div class="Triangle Triangle--three"/>
-    <div class="Triangle Triangle--four"/>
-  </div>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22.56 25.6">
+      <defs>
+          <style>
+          .cls-1 {
+              fill: #16b9d4;
+          }
+
+          .cls-2 {
+              fill: #08606c;
+          }
+          </style>
+      </defs>
+      <title>HelixLogo</title>
+      <g id="Layer_2" data-name="Layer 2">
+          <g id="logo_helix">
+              <path d="M21.4,19l-9.82,5.67a.59.59,0,0,1-.59,0L1.16,19a.59.59,0,0,1-.29-.51V7.13a.59.59,0,0,1,.29-.51L11,.95a.59.59,0,0,1,.59,0L21.4,6.62a.59.59,0,0,1,.29.51V18.47A.59.59,0,0,1,21.4,19Z" />
+              <path class="cls-1" d="M11.28.87a.59.59,0,0,1,.29.08L21.4,6.62a.59.59,0,0,1,.29.51V18.47a.59.59,0,0,1-.29.51l-9.82,5.67a.59.59,0,0,1-.59,0L1.16,19a.59.59,0,0,1-.29-.51V7.13a.59.59,0,0,1,.29-.51L11,.95a.59.59,0,0,1,.29-.08m0-.87a1.46,1.46,0,0,0-.73.19L.73,5.87A1.46,1.46,0,0,0,0,7.13V18.47a1.46,1.46,0,0,0,.73,1.26l9.82,5.67a1.45,1.45,0,0,0,1.45,0l9.82-5.67a1.46,1.46,0,0,0,.73-1.26V7.13a1.46,1.46,0,0,0-.73-1.26L12,.19A1.46,1.46,0,0,0,11.28,0Z" />
+              <path class="cls-2" d="M6.35,13.93a.44.44,0,0,0,.19.34l9.58,5.85c.1.06.19,0,.19-.11v-2.2a.44.44,0,0,0-.19-.34L6.54,11.62c-.1-.06-.19,0-.19.11Z" />
+              <path class="cls-2" d="M16.31,12a.44.44,0,0,0-.19-.34L6.54,5.78c-.1-.06-.19,0-.19.11v2.2a.44.44,0,0,0,.19.34l9.58,5.85c.1.06.19,0,.19-.11Z" />
+              <path class="cls-1" d="M16.12,5.77,6.54,11.4l-.19.34v2.2h0v0a.41.41,0,0,0,.06.16.38.38,0,0,0,.08.1l0,0a.11.11,0,0,1,0-.06.12.12,0,0,1,.06-.1h0l9.6-5.63a.43.43,0,0,0,.19-.34V5.89Z" />
+              <path class="cls-1" d="M6.54,20.13l9.58-5.62a.43.43,0,0,0,.19-.34V12h0v0a.41.41,0,0,0-.06-.16.38.38,0,0,0-.08-.1v0a.11.11,0,0,1,0,.06.12.12,0,0,1-.06.1h0l-9.6,5.63a.43.43,0,0,0-.19.34V20C6.35,20.14,6.43,20.19,6.54,20.13Z" />
+          </g>
+      </g>
+  </svg>
 </template>
-
-<style>
-.VueToNuxtLogo {
-  display: inline-block;
-  animation: turn 2s linear forwards 1s;
-  transform: rotateX(180deg);
-  position: relative;
-  overflow: hidden;
-  height: 180px;
-  width: 245px;
-}
-
-.Triangle {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 0;
-  height: 0;
-}
-
-.Triangle--one {
-  border-left: 105px solid transparent;
-  border-right: 105px solid transparent;
-  border-bottom: 180px solid #41b883;
-}
-
-.Triangle--two {
-  top: 30px;
-  left: 35px;
-  animation: goright 0.5s linear forwards 3.5s;
-  border-left: 87.5px solid transparent;
-  border-right: 87.5px solid transparent;
-  border-bottom: 150px solid #3b8070;
-}
-
-.Triangle--three {
-  top: 60px;
-  left: 35px;
-  animation: goright 0.5s linear forwards 3.5s;
-  border-left: 70px solid transparent;
-  border-right: 70px solid transparent;
-  border-bottom: 120px solid #35495e;
-}
-
-.Triangle--four {
-  top: 120px;
-  left: 70px;
-  animation: godown 0.5s linear forwards 3s;
-  border-left: 35px solid transparent;
-  border-right: 35px solid transparent;
-  border-bottom: 60px solid #fff;
-}
-
-@keyframes turn {
-  100% {
-    transform: rotateX(0deg);
-  }
-}
-
-@keyframes godown {
-  100% {
-    top: 180px;
-  }
-}
-
-@keyframes goright {
-  100% {
-    left: 70px;
-  }
-}
-</style>
