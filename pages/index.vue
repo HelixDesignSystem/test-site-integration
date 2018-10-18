@@ -6,7 +6,7 @@
     <h2>Blog</h2>
     <ul>
       <li
-        v-for="post in posts"
+        v-for="post in delta[0]"
         :key="post.date">
         <nuxt-link :to="post._path">
           {{ post.title }}
@@ -21,7 +21,7 @@
     <h2>Docs</h2>
     <ul>
       <li
-        v-for="doc in docs"
+        v-for="doc in delta[1]"
         :key="doc.date">
         <nuxt-link :to="doc._path">
           {{ doc.title }}
@@ -44,11 +44,12 @@ export default {
       ...context(key),
       _path: `/blog/${key.replace('.json', '').replace('./', '')}`
     }));
-    // const docs = context.keys().map(key => ({
-    //   ...context(key),
-    //   _path: `/docs/${key.replace('.json', '').replace('./', '')}`
-    // }));
-    return { posts };
+    const docs = context.keys().map(key => ({
+      ...context(key),
+      _path: `/docs/${key.replace('.json', '').replace('./', '')}`
+    }));
+    const delta = { posts, docs }
+    return { delta };
   }
 };
 </script>
