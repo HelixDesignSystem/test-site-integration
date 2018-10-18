@@ -44,11 +44,11 @@ export default {
       ...context(key),
       _path: `/blog/${key.replace('.json', '').replace('./', '')}`
     }));
-    const docs = context.keys().map(key => ({
-      ...context(key),
-      _path: `/docs/${key.replace('.json', '').replace('./', '')}`
-    }));
-    return { posts, docs };
+    // const docs = context.keys().map(key => ({
+    //   ...context(key),
+    //   _path: `/docs/${key.replace('.json', '').replace('./', '')}`
+    // }));
+    return { posts };
   }
 };
 </script>
