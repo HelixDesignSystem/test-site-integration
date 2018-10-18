@@ -1,6 +1,8 @@
 <template>
   <section class="container">
-    <app-logo/>
+    <div class="logo">
+      <app-logo/>
+    </div>
     <h2>Blog</h2>
     <ul>
       <li
@@ -58,5 +60,11 @@ export default {
 }
 .links {
   padding-top: 15px;
+}
+.logo {
+  height: 200px;
+  margin: 10px;
+  padding: 10px;
+  width: 200px;
 }
 </style>
