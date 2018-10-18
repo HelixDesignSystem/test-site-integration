@@ -1,5 +1,6 @@
 <template>
   <section class="container">
+    <app-logo/>
     <h2>Blog</h2>
     <ul>
       <li
