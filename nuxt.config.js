@@ -27,7 +27,6 @@ module.exports = {
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Roboto' },
-      { rel: 'stylesheet', href: '~/assets/helix-ui/dist/styles/helix-ui.min.css' }
     ]
   },
 
@@ -40,12 +39,7 @@ module.exports = {
   ** Global CSS
   */
   css: [
-  ],
-
-  /*
-  ** Plugins to load before mounting the App
-  */
-  plugins: [
+    '@/assets/helix-ui/dist/styles/helix-ui.min.css'
   ],
 
   /*
@@ -59,8 +53,22 @@ module.exports = {
   ** Route config for pre-rendering
   */
   generate: {
-    routes: dynamicRoutes
+    routes: dynamicRoutes,
+    fallback: '404.html'
   },
+
+  // /*
+  // ** Router configuration
+  // */
+  // router: {
+  //   extendRoutes (routes, resolve) {
+  //     routes.push({
+  //       name: '404',
+  //       path: '*',
+  //       component: resolve(__dirname, 'layouts/error.vue')
+  //     });
+  //   }
+  // },
 
   /*
   ** Build configuration
