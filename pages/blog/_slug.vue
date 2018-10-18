@@ -1,14 +1,9 @@
 <template>
   <article>
     <h1>{{ title }}</h1>
-    <p>{{ body }}
+    <p><span v-html="body"></span>
       <br>
-      <strong>Posted on <time :datetime="date">{{ date }}</time></strong>
-    </p>
-    <br />
-    <br />
-    <br />
-    <p>Using v-html directive: <span v-html="body"></span></p>
+      <strong>Posted on <time :datetime="date">{{ date }}</time></strong></p>
     <img :src="thumbnail">
   </article>
 </template>

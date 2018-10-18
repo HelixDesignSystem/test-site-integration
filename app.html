@@ -4,6 +4,9 @@
 <head>
   {{ HEAD }}
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+
+  <script src="https://unpkg.com/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
+  <script src="https://unpkg.com/@webcomponents/webcomponentsjs/bundles/webcomponents-sd-ce.js" onload="window.WebComponents._batchCustomElements()"></script>
 </head>
 
 <body {{ BODY_ATTRS }}>
@@ -20,5 +23,17 @@
     });
   }
 </script>
+<!-- intelligently load ES5 Adapter (if needed) -->
+<span id="ce-es5-adapter">
+  <script>
+    if (!window.customElements) {
+      var elAdapter = document.querySelector('#ce-es5-adapter');
+      elAdapter.parentElement.removeChild(elAdapter);
+    }
+  </script>
+  <script src="https://unpkg.com/@webcomponents/webcomponentsjs/custom-elements-es5-adapter.js"></script>
+</span>
+
+<script src="/helix-ui/scripts/helix-ui.browser.min.js"></script>
 
 </html>
