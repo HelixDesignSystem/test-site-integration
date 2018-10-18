@@ -14,6 +14,21 @@
       </li>
     </ul>
   </section>
+  <section class="container">
+    <div class="logo">
+      <app-logo/>
+    </div>
+    <h2>Docs</h2>
+    <ul>
+      <li
+        v-for="doc in docs"
+        :key="doc.date">
+        <nuxt-link :to="doc._path">
+          {{ doc.title }}
+        </nuxt-link>
+      </li>
+    </ul>
+  </section>
 </template>
 
 <script>
@@ -24,12 +39,16 @@ export default {
   },
   data() {
     // Using webpacks context to gather all files from a folder
-    const context = require.context('~/content/blog/posts/', false, /\.json$/);
+    const context = require.context('~/content/', false, /\.json$/);
     const posts = context.keys().map(key => ({
       ...context(key),
       _path: `/blog/${key.replace('.json', '').replace('./', '')}`
     }));
-    return { posts };
+    const docs = context.keys().map(key => ({
+      ...context(key),
+      _path: `/docs/${key.replace('.json', '').replace('./', '')}`
+    }));
+    return { posts, docs };
   }
 };
 </script>
