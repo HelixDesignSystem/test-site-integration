@@ -39,7 +39,7 @@ module.exports = {
   ** Global CSS
   */
   css: [
-    '@/assets/helix-ui/dist/styles/helix-ui.min.css'
+    '@/assets/helix-ui/helix-ui.min.css'
   ],
 
   /*
