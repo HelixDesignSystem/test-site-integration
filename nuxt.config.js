@@ -49,6 +49,12 @@ module.exports = {
   modules: [
     '@nuxtjs/markdownit'
   ],
+  markdownit: {
+    injected: true,
+    use: [
+      'markdown-it-highlightjs'
+    ]
+  },
 
   /*
   ** Route config for pre-rendering
