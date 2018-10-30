@@ -1,7 +1,7 @@
-<template>
+<template lang="markdown">
   <article>
     <h1>{{ title }}</h1>
-    <p><span v-html="body"></span>
+    <p><span v-html="$md.render(body)"></span>
       <br>
       <strong>Posted on <time :datetime="date">{{ date }}</time></strong></p>
     <img :src="thumbnail">
