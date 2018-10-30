@@ -53,7 +53,8 @@ module.exports = {
     injected: true,
     use: [
       'markdown-it-highlightjs'
-    ]
+    ],
+    html: true
   },
 
   /*
