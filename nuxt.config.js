@@ -44,6 +44,13 @@ module.exports = {
   ],
 
   /*
+  ** Add HelixUI tester as a plugin
+  */
+  // plugins: [
+  //   { src: '~/plugins/helix-test-component', ssr: false }
+  // ],
+  //
+  /*
   ** Nuxt.js modules
   */
   modules: [
