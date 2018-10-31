@@ -1,9 +1,9 @@
 <template>
   <article>
     <h1>{{ title }}</h1>
-    <p><span v-html="$md.render(body)"></span>
+    <p><span v-html="$md.render(body)"/>
       <br>
-      <strong>Posted on <time :datetime="date">{{ date }}</time></strong></p>
+    <strong>Posted on <time :datetime="date">{{ date }}</time></strong></p>
     <img :src="thumbnail">
   </article>
 </template>
