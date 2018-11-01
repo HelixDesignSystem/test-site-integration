@@ -1,5 +1,5 @@
 {
   "title": "HelixUI Tester",
   "date": "2018-10-31T17:14:08-05:00",
-  "body": "<p>\n\n  <hx-icon data-tooltip=\"tooltip1\" type=\"help-circle\"></hx-icon>\n\n</p>\n\n<hx-tooltip id=\"tooltip1\" position=\"top\">\n\n  Top\n\n</hx-tooltip>\n\nHelixUI icon"
+  "body": "<p><hx-icon data-tooltip=\"tooltip1\" type=\"help-circle\"></hx-icon></p><hx-tooltip id=\"tooltip1\" position=\"top\">Top</hx-tooltip>\n\n\n\nHelixUI icon"
 }
