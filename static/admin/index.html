@@ -11,7 +11,7 @@
     </head>
     <body>
         <!-- Include the script that builds the page and powers Netlify CMS -->
-        <script src="https://unpkg.com/netlify-cms@^1.0.0/dist/cms.js"></script>
+        <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
         <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 <script>
   if (window.netlifyIdentity) {
@@ -23,6 +23,38 @@
       }
     });
   }
+</script>
+<script>
+  CMS.registerPreviewStyle('../../assets/helix-ui/helix-ui.min.css');
+</script>
+<script>
+CMS.registerEditorComponent({
+  // Internal id of the component
+  id: "hx-element",
+  // Visible label
+  label: "HelixUI Component",
+  // Fields the user need to fill out when adding an instance of the component
+  fields: [{name: 'id', label: 'opts', widget: 'string'}],
+  // Pattern to identify a block as being an instance of this component
+  pattern: /^hx- (\S+)$/,
+  // Function to extract data elements from the regexp match
+  fromBlock: function(match) {
+    return {
+      id: match[1]
+    };
+  },
+  // Function to create a text block from an instance of this component
+  toBlock: function(obj) {
+    return 'hx- ' + obj.id;
+  },
+  // Preview output for this component. Can either be a string or a React component
+  // (component gives better render performance)
+  toPreview: function(obj) {
+    return (
+      '<hx-' + obj.id + '/>'
+    );
+  }
+});
 </script>
     </body>
 </html>
