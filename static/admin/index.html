@@ -11,8 +11,8 @@
     </head>
     <body>
         <!-- Include the script that builds the page and powers Netlify CMS -->
-        <script src="https://unpkg.com/netlify-cms@2.0.9/dist/netlify-cms.js"></script>
-        <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+        <script type="text/javascript" src="https://unpkg.com/netlify-cms@2.0.9/dist/netlify-cms.js"></script>
+        <script type="text/javascript" src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 <script>
   if (window.netlifyIdentity) {
     window.netlifyIdentity.on("init", user => {
@@ -22,6 +22,9 @@
         });
       }
     });
+    window.netlifyIdentity.on('error', err => {
+      console.error('Error with Netlify Identity', err)
+    })
   }
 </script>
 <script>
@@ -57,13 +60,13 @@ CMS.registerEditorComponent({
   },
   // Function to create a text block from an instance of this component
   toBlock: function(obj) {
-    return '<hx-' + obj.id + obj.opts + '><hx-' + obj.id + '/>';
+    return '<hx-' + obj.id + ' ' + obj.opts + '><hx-' + obj.id + '/>';
   },
   // Preview output for this component. Can either be a string or a React component
   // (component gives better render performance)
   toPreview: function(obj) {
     return (
-      '<hx-' + obj.id + obj.opts + '><hx-' + obj.id + '/>'
+      '<hx-' + obj.id + ' ' + obj.opts + '><hx-' + obj.id + '/>'
     );
   }
 });
