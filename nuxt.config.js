@@ -54,7 +54,8 @@ module.exports = {
   ** Nuxt.js modules
   */
   modules: [
-    '@nuxtjs/markdownit'
+    '@nuxtjs/markdownit',
+    'vuera'
   ],
   markdownit: {
     injected: true,
