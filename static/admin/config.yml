@@ -30,3 +30,15 @@ collections:
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Featured Image", name: "thumbnail", widget: "image", required: false}
       - {label: "Body", name: "body", widget: "markdown"}
+  - name: "markdowntest"
+    label: "Markdown"
+    description: "A chance to test the markdown format"
+    folder: "content/markdown"
+    create: true
+    slug: "{{slug}}"
+    format: 'frontmatter'
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Featured Image", name: "thumbnail", widget: "image", required: false}
+      - {label: "Body", name: "body", widget: "markdown"}
