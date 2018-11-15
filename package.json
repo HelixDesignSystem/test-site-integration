@@ -22,7 +22,10 @@
     "netlify-cli": "^2.0.0",
     "npx": "^10.2.0",
     "nuxt": "^2.0.0",
-    "vue": "^2.5.17"
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3",
+    "vue": "^2.5.17",
+    "vuera": "^0.2.3"
   },
   "devDependencies": {
     "babel-eslint": "^8.2.1",
