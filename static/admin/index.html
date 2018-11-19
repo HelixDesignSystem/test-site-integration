@@ -61,32 +61,26 @@
         name: 'opts',
         label: 'exact ops from the element API',
         widget: 'string'
-      },
-      {
-        name: 'contents',
-        label: 'any internal content for the tag',
-        widget: 'string'
       }
     ],
     // Pattern to identify a block as being an instance of this component
-    pattern: /^{{helix (\S+)(( {1}\S+)+)}}$/,
+    pattern: /^{{helix (\S+)(\s+)(\S+)}}$/,
     // Function to extract data elements from the regexp match
     fromBlock: function(match) {
       return {
         id: match[1],
-        opts: match[2],
-        contents: match[3]
+        opts: match[3]
       };
     },
     // Function to create a text block from an instance of this component
     toBlock: function(obj) {
-      return `{{helix ${obj.id} ${obj.opts} ${obj.contents}}}`;
+      return `{{helix ${obj.id} ${obj.opts}}}`;
     },
     // Preview output for this component. Can either be a string or a React component
     // (component gives better render performance)
     toPreview: function(obj) {
       return (
-        `Hey! I'm a string to show this renders! <hx-${obj.id} ${obj.opts}>${obj.contents}</hx-${obj.id}>`
+        `Hey! I'm a string to show this renders! <hx-${obj.id} ${obj.opts}></hx-${obj.id}>`
       );
     }
   });
